@@ -51,9 +51,11 @@ async (conn, mek, m, { from, q, reply }) => {
         const response = await axios.get(url);
         const joke = response.data;
         const jokeMessage = `
-😂 *Here's a random joke for you!* 😂
+*😂Here's a random joke for you😂.*
+
 *${joke.setup}*
 ${joke.punchline} 😄
+
 > *POWERED BY KG TECH*
 `;
         return reply(jokeMessage);
